@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 100px white;
+}
+
+.header {
+  height: 10%;
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+.body_wrapper {
+  width: 100%;
+  height: 85%;
+  background-color: rgb(13, 13, 13);
+  display: flex;
+  padding: 10px;
+}
+
+.body_wrapper .skills {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.skills .skill_form {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill_form form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.skills_list {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.skill_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: rgba(221, 160, 221, 0.1);
+  gap: 10px;
+  width: 30%;
+  cursor: pointer;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.delBtn:hover {
+  animation: bin_rotate 500ms alternate;
+}
+
+@keyframes bin_rotate {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.skill_wrapper:hover {
+  background: rgba(221, 160, 221, 0.5);
+}
+
+.footer {
+  height: 5%;
+  background-color: rgb(25, 25, 25);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
