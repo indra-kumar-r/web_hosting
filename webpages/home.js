@@ -7,7 +7,7 @@ function add_skill() {
       .querySelector(".skill_input")
       .value.toUpperCase();
 
-    fetch("http://127.0.0.1:3000/add_skill", {
+    fetch(`${webhosting-production.up.railway.app}/add_skill`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function read_skills() {
   let skills_list = document.querySelector(".skills_list");
   skills_list.innerHTML = "";
 
-  fetch("http://127.0.0.1:3000/read_skill", {
+  fetch(`${webhosting-production.up.railway.app}/read_skill`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -60,7 +60,7 @@ function read_skills() {
         let id = data.skills[i].id;
 
         delBtn.addEventListener("click", () => {
-          fetch(`http://127.0.0.1:3000/delete_skill?id=${id}`, {
+          fetch(`${webhosting-production.up.railway.app}/delete_skill?id=${id}`, {
             method: "DELETE",
           })
             .then((response) => response.json())
